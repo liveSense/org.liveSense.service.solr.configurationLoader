@@ -9,7 +9,7 @@
 	<artifactId>org.liveSense.service.solr.configurationLoader</artifactId>
 	<packaging>bundle</packaging>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>liveSense Solr based search service configuration loader.</name>
+	<name>liveSense :: Misc :: Solr based search service configuration loader.</name>
 	<description>Solr based search service configuration loader</description>
 	<build>
 		<plugins>
