@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><features name="liveSense-${liveSense.version}-service-solr-configurationLoader" xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+	<feature name="liveSense-service-solr-configurationLoader" version="${liveSense.service.solr.configurationLoader.version}" description="liveSense service solr configurationLoader">
+        <feature>liveSense-service-solr</feature>
+        <bundle>mvn:com.github.livesense/org.liveSense.service.solr.configurationLoader/${liveSense.service.solr.configurationLoader.version}</bundle>
+	</feature>
+</features>
