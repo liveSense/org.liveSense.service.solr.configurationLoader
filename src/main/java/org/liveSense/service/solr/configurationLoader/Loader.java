@@ -304,13 +304,13 @@ public class Loader implements SynchronousBundleListener {
     public boolean canHandle(Bundle bundle, String name) {
     	InputStream st = null;
     	try {
-    		st = bundle.getEntry(name+EmbeddedSolrClient.DEFAULT_SOLR_CONFIG_FILENAME).openStream();
+    		st = bundle.getEntry(name+ EmbeddedSolrClient.DEFAULT_SOLR_CONFIG_FILENAME).openStream();
     		if (st != null) {
     			try {
     				st.close();
     			} catch (Throwable th) {
     			}
-    			st = bundle.getEntry(name+EmbeddedSolrClient.DEFAULT_SOLR_SCHEMA_FILENAME).openStream();
+    			st = bundle.getEntry(name+ EmbeddedSolrClient.DEFAULT_SOLR_SCHEMA_FILENAME).openStream();
     		}
     		return st != null;
     	} catch (Throwable th) {
@@ -360,7 +360,7 @@ public class Loader implements SynchronousBundleListener {
         boolean firstEntry = true;
         while (entries.hasMoreElements()) {
         	URL confPath = (URL)entries.nextElement();
-        	if (!confPath.toString().endsWith("/") && !confPath.toString().endsWith("solrconfig.xml") && !confPath.toString().endsWith("solrschema.xml") ) {
+        	if (!confPath.toString().endsWith("/")) {
         		if (firstEntry) {
 	            	firstEntry = false;
 	            } else {
